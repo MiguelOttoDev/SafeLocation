@@ -1,0 +1,22 @@
+[
+    { "id": 1, "nome": "João da Silva", "localizacao": "Praça Central" },
+    { "id": 2, "nome": "Maria Oliveira", "localizacao": "Avenida Exemplo" },
+    { "id": 3, "nome": "Carlos Souza", "localizacao": "Rua das Flores" },
+    { "id": 4, "nome": "Ana Beatriz", "localizacao": "Shopping Norte" },
+    { "id": 5, "nome": "Pedro Santos", "localizacao": "Estação Sul" },
+    { "id": 6, "nome": "Lucas Almeida", "localizacao": "Parque Leste" },
+    { "id": 7, "nome": "Mariana Costa", "localizacao": "Praça Velha" },
+    { "id": 8, "nome": "Fernanda Lima", "localizacao": "Av. Atlântica" },
+    { "id": 9, "nome": "Ricardo Pereira", "localizacao": "Bairro Industrial" },
+    { "id": 10, "nome": "Juliana Rocha", "localizacao": "Vila Nova" },
+    { "id": 11, "nome": "Lucas Matos", "localizacao": "Rua Nova" },
+    { "id": 12, "nome": "Patrícia Gomes", "localizacao": "Centro Histórico" },
+    { "id": 13, "nome": "Renato Barros", "localizacao": "Jardim Primavera" },
+    { "id": 14, "nome": "Beatriz Azevedo", "localizacao": "Lago Norte" },
+    { "id": 15, "nome": "Felipe Nunes", "localizacao": "Estação Leste" },
+    { "id": 16, "nome": "Aline Ferreira", "localizacao": "Av. Paulista" },
+    { "id": 17, "nome": "Gustavo Carvalho", "localizacao": "Jardim América" },
+    { "id": 18, "nome": "Rafaela Borges", "localizacao": "Vila Olímpia" },
+    { "id": 19, "nome": "Sérgio Leite", "localizacao": "Centro Empresarial" },
+    { "id": 20, "nome": "Camila Faria", "localizacao": "Parque Industrial" }
+]

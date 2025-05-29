@@ -32,7 +32,7 @@ export default function Home() {
 
       <div className="flex flex-col sm:flex-row justify-center gap-6 mt-8">
         <motion.a
-          href="#alertas"
+          href="/city"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6 }}
@@ -54,7 +54,7 @@ export default function Home() {
         </motion.a>
 
         <motion.a
-          href="#refugios"
+          href="/refugios"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.8 }}

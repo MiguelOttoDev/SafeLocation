@@ -7,6 +7,7 @@ import Cidade from './pages/Cidade';
 import "leaflet/dist/leaflet.css";
 import Refugios from './pages/Refugios';
 import NotFound from './pages/NotFound';
+import Busca from './pages/Busca';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/city" element={<Cidade />} />
             <Route path="/refugios" element={<Refugios/>} />
+            <Route path="/busca" element={<Busca/>} />
             <Route path="*" element={<NotFound/>} />
           </Routes>
         </main>

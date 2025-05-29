@@ -47,8 +47,7 @@ export default function NavBar() {
                         <li><Link to="/" className={`block py-2 px-3 rounded-sm md:p-0 ${getLinkClasses("/")}`}>Home</Link></li>
                         <li><Link to="/city" className={`block py-2 px-3 rounded-sm md:p-0 ${getLinkClasses("/city")}`}>Cidade</Link></li>
                         <li><Link to="/refugios" className={`block py-2 px-3 rounded-sm md:p-0 ${getLinkClasses("/refugios")}`}>Refúgios</Link></li>
-                        <li><Link to="/pricing" className={`block py-2 px-3 rounded-sm md:p-0 ${getLinkClasses("/pricing")}`}>Pricing</Link></li>
-                        <li><Link to="/contact" className={`block py-2 px-3 rounded-sm md:p-0 ${getLinkClasses("/contact")}`}>Contact</Link></li>
+                        <li><Link to="/busca" className={`block py-2 px-3 rounded-sm md:p-0 ${getLinkClasses("/busca")}`}>Busca de Pessoas</Link></li>
                     </ul>
                 </div>
             </div>
