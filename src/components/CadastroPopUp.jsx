@@ -35,7 +35,7 @@ export default function CadastroPopUp({ isOpen, onClose }) {
         );
 
         // Redireciona para cidade.html
-        //   window.location.href = "cidade.html";
+        window.location.href = "/city";
     };
 
     if (!isOpen) return null;

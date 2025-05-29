@@ -1,5 +1,3 @@
-import { GiBullseye, GiSmartphone, GiShield, GiAlarmClock } from "react-icons/gi";
-import { MdPeople } from "react-icons/md";
 import { motion } from "framer-motion";
 
 export default function AboutIdea() {
@@ -15,15 +13,13 @@ export default function AboutIdea() {
                 Sobre a Ideia
             </motion.h2>
 
-            <div className="grid gap-10 md:grid-cols-2">
+            <div className="grid gap-10 md:grid-cols-2 ">
                 {[
                     {
-                        Icon: GiBullseye,
                         title: "🎯 Objetivo",
                         content: "Criar um aplicativo de emergência para ajudar moradores e autoridades a lidarem com desastres naturais, melhorando a comunicação, localização de pessoas e direcionamento para refúgios.",
                     },
                     {
-                        Icon: GiSmartphone,
                         title: "📱 Como Funciona",
                         content: (
                             <>
@@ -33,7 +29,6 @@ export default function AboutIdea() {
                         ),
                     },
                     {
-                        Icon: GiAlarmClock,
                         title: "🔧 Funcionalidades",
                         isFull: true,
                         content: (
@@ -47,7 +42,6 @@ export default function AboutIdea() {
                         ),
                     },
                     {
-                        Icon: GiShield,
                         title: "🔐 Segurança e Privacidade",
                         content: (
                             <>
@@ -57,7 +51,6 @@ export default function AboutIdea() {
                         ),
                     },
                     {
-                        Icon: MdPeople,
                         title: "✅ Benefícios",
                         content: (
                             <ul className="list-disc list-inside space-y-2 text-gray-700">
@@ -71,14 +64,13 @@ export default function AboutIdea() {
                 ].map((item, index) => (
                     <motion.div
                         key={index}
-                        className={`bg-white shadow-md rounded-xl p-6 ${item.isFull ? 'md:col-span-2' : ''}`}
+                        className={`hover:shadow-xl transition-shadow duration-300 bg-white shadow-md rounded-xl p-6 ${item.isFull ? 'md:col-span-2 hover:shadow-xl transition-shadow duration-300' : ''}`}
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: index * 0.2 }}
                     >
-                        <div className="flex items-center mb-4">
-                            <item.Icon className="text-blue-600 text-3xl mr-3" />
+                        <div className="flex items-center mb-4 ">
                             <h3 className="text-2xl font-semibold">{item.title}</h3>
                         </div>
                         <div>{item.content}</div>
