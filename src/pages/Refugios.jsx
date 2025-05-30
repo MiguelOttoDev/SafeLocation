@@ -14,7 +14,6 @@ export default function Refugios() {
 
     return (
         <div className="flex flex-col items-center min-h-screen p-4 bg-gray-50">
-            <SubNavBar />
             <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 p-2 mb-8 text-center my-4">
                 Refúgios Próximos
             </h2>

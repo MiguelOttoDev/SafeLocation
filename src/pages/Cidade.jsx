@@ -46,9 +46,7 @@ export default function Cidade() {
     setTimeout(() => setShowMensagemPerigo(false), 4000);
   };
 
-  const handleVerRefugios = () => {
-    window.location.href = "/refugios";
-  };
+
 
   return (
     <div className="flex flex-col items-center min-h-screen p-4 bg-gray-50">
@@ -76,7 +74,6 @@ export default function Cidade() {
           <AcoesCidade
             onAtivarAlerta={handleAtivarAlerta}
             onEstouEmPerigo={handleEstouEmPerigo}
-            onVerRefugios={handleVerRefugios}
           />
 
           <MensagemPerigo visible={showMensagemPerigo} />

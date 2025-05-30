@@ -1,6 +1,6 @@
 import { AiOutlineWarning, AiOutlineSend, AiOutlineHome } from "react-icons/ai";
 
-export default function AcoesCidade({ onAtivarAlerta, onEstouEmPerigo, onVerRefugios }) {
+export default function AcoesCidade({ onAtivarAlerta, onEstouEmPerigo }) {
   return (
     <div className="flex flex-col md:flex-row gap-4 justify-center my-6">
       <button
@@ -18,14 +18,14 @@ export default function AcoesCidade({ onAtivarAlerta, onEstouEmPerigo, onVerRefu
         <AiOutlineSend size={24} />
         Estou em Perigo
       </button>
-
-      <button
-        onClick={onVerRefugios}
-        className="flex items-center gap-2 bg-sky-600 hover:bg-sky-700 text-white font-semibold px-6 py-3 rounded transition"
-      >
-        <AiOutlineHome size={24} />
-        Ver Refúgios
-      </button>
+      <a href="/refugios">
+        <button
+          className="flex items-center gap-2 bg-sky-600 hover:bg-sky-700 text-white font-semibold px-6 py-3 rounded transition"
+        >
+          <AiOutlineHome size={24} />
+          Ver Refúgios
+        </button>
+      </a>
     </div>
   );
 }
