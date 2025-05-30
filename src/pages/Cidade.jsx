@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import AlertaBanner from "../components/AlertaBanner";
 import CadastroPopUp from "../components/CadastroPopUp";
 import SubNavBar from "../components/SubNavBar";
-import { AiOutlineWarning } from "react-icons/ai";
 import AcoesCidade from "../components/AcoesCidade";
 import MapaCidade from "../components/MapaCidade";
 import ModalSOS from "../components/ModalSOS";
@@ -16,6 +15,7 @@ export default function Cidade() {
   const [mensagemSOS, setMensagemSOS] = useState("");
   const [latitude] = useState(-23.55052);
   const [longitude] = useState(-46.633308);
+  const [usuario, setUsuario] = useState(null);
 
   const refugios = [
     { id: 1, nome: "Refúgio Central", lat: -23.548, lng: -46.634 },
@@ -23,9 +23,11 @@ export default function Cidade() {
   ];
 
   useEffect(() => {
-    const usuario = JSON.parse(localStorage.getItem("usuario"));
-    if (!usuario) {
+    const usuarioSalvo = JSON.parse(localStorage.getItem("usuario"));
+    if (!usuarioSalvo) {
       setShowCadastro(true);
+    } else {
+      setUsuario(usuarioSalvo);
     }
   }, []);
 
@@ -50,14 +52,22 @@ export default function Cidade() {
 
   return (
     <div className="flex flex-col items-center min-h-screen p-4 bg-gray-50">
-      <SubNavBar />
+      
+      <SubNavBar usuario={usuario} />
 
-      {showCadastro && <CadastroPopUp isOpen={true} onClose={() => { }} />}
+      {showCadastro && (
+        <CadastroPopUp
+          isOpen={true}
+          onClose={(novoUsuario) => {
+            setShowCadastro(false);
+            setUsuario(novoUsuario); 
+          }}
+        />
+      )}
 
       {!showCadastro && (
         <>
           <AlertaBanner alertaAtivo={alertaAtivo} mensagem="Enchente na sua região! Fique atento!" />
-
 
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-800 p-2 mb-8 text-center my-4">
             Página do Município

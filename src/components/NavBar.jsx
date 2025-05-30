@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,6 +14,10 @@ export default function NavBar() {
         return location.pathname === path
             ? "text-blue-700 md:dark:text-blue-500"
             : "text-gray-900 dark:text-white md:dark:hover:text-blue-500";
+    };
+
+    const limpar = () => {
+        localStorage.clear();
     };
 
     return (
@@ -48,6 +53,7 @@ export default function NavBar() {
                         <li><Link to="/city" className={`block py-2 px-3 rounded-sm md:p-0 ${getLinkClasses("/city")}`}>Cidade</Link></li>
                         <li><Link to="/refugios" className={`block py-2 px-3 rounded-sm md:p-0 ${getLinkClasses("/refugios")}`}>Refúgios</Link></li>
                         <li><Link to="/busca" className={`block py-2 px-3 rounded-sm md:p-0 ${getLinkClasses("/busca")}`}>Busca de Pessoas</Link></li>
+                        <li><Link onClick={limpar} to="/" className={`block py-2 px-3 rounded-sm md:p-0 ${getLinkClasses("/*")}`}>Sair</Link></li>
                     </ul>
                 </div>
             </div>
